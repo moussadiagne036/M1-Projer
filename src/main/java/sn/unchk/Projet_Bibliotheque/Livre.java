@@ -21,7 +21,7 @@ public class Livre {
     public Livre(long l, String s, String seydouBadian, String string, boolean b) {
         super();
     }
-    public Livre(String titre, String auteur, String isbn, boolean disponible) {
+    public Livre(Long id, String titre, String auteur, String isbn, boolean disponible) {
         this.id = id;
         this.titre = titre;
         this.auteur = auteur;
@@ -29,6 +29,7 @@ public class Livre {
         this.disponible = disponible;
 
     }
+
     public Long getId() {
         return id;
     }

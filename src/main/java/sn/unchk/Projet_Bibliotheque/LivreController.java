@@ -10,21 +10,23 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+
 @RestController
 @RequestMapping("livre/api")
 public class LivreController {
 
     private List<Livre> livres = new ArrayList<>();
 // --- Initialisation de quelques livres, dont "Vol de nuit" ---
-    public LivreController() {
-        livres.add(new Livre(1L, "Une si longue lettre", "Mariama Bâ", "978-2-07-037963-7", true));
-        livres.add(new Livre(2L, "Sous l'orage", "Seydou Badian", "978-2-02-006576-8", true));
-        livres.add(new Livre(3L, "Le Vieux Nègre et la médaille", "Ferdinand Oyono", "978-2-07-036256-1", false));
-        livres.add(new Livre(4L, "Vol de nuit", "Antoine de Saint-Exupéry", "978-2-07-020347-5", true));
-        livres.add(new Livre(5L, "La Peste", "Albert Camus", "978-2-07-036084-0", true));
-        livres.add(new Livre(6L, "Faidre de Jean Racine", "Pasthie Fae", "134-2-07-036084-0", true));
-        livres.add(new Livre(7L, "Une vie de Boy", "Ferdinant Oyono", "102-2-07-036084-0", true));
-    }
+public LivreController() {
+    livres.add(new Livre(1L, "Une si longue lettre", "Mariama Bâ", "978-2-07-037963-7", true));
+    livres.add(new Livre(2L, "Sous l'orage", "Seydou Badian", "978-2-02-006576-8", true));
+    livres.add(new Livre(3L, "Le Vieux Nègre et la médaille", "Ferdinand Oyono", "978-2-07-036256-1", false));
+    livres.add(new Livre(4L, "Vol de nuit", "Antoine de Saint-Exupéry", "978-2-07-020347-5", true));
+    livres.add(new Livre(5L, "La Peste", "Albert Camus", "978-2-07-036084-0", true));
+    livres.add(new Livre(6L, "Faidre de Jean Racine", "Pasthie Fae", "134-2-07-036084-0", true));
+    livres.add(new Livre(7L, "Une vie de Boy", "Ferdinant Oyono", "102-2-07-036084-0", true));
+
+}
 
     @GetMapping
     public List<Livre> getAllLivres() {
